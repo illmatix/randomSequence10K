@@ -1,0 +1,16 @@
+{
+  "name": "PHP Dev Environment",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "php.validate.executablePath": "/usr/local/bin/php"
+  },
+  "extensions": [
+    "xdebug.php-debug",
+    "bmewburn.vscode-intelephense-client"
+  ],
+  "remoteUser": "www-data",
+  "forwardPorts": [80]
+}

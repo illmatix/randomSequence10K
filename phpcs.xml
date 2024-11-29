@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ruleset name="Project Coding Standards">
+    <!-- Include the PSR-12 standard -->
+    <rule ref="PSR12"/>
+
+    <!-- Set paths to include -->
+    <file>src/</file>
+    <file>tests/</file>
+
+    <!-- Exclude specific rules -->
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="tabWidth" value="4"/>
+        </properties>
+    </rule>
+
+    <!-- Ignore files or directories -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>public/assets/*</exclude-pattern>
+
+    <!-- Add custom rules or modify severity -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="150"/>
+        </properties>
+    </rule>
+</ruleset>
